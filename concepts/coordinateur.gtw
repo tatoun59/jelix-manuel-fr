@@ -14,7 +14,7 @@ les informations suivantes :
 Des plugins peuvent modifier éventuellement ces informations (ex: plugin qui
 vérifie l'authentification et redirige alors vers une autre action, ...).
 
-Avec ces informations il va donc récupérer le contrôleur correspondant et
+Avec ces informations, il va donc récupérer le contrôleur correspondant et
 exécuter la méthode qui implémente le traitement correspondant à l'action.
 
 Il récupérera l'objet jResponse fourni par le traitement de l'action pour alors
