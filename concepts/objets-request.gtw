@@ -19,7 +19,7 @@ Les objets jRequest disponibles sont :
   * xmlrpc : pour les requêtes XML-RPC. La réponse sera nécessairement en XML-RPC,
   * jsonrpc : pour les requêtes JSON-RPC. La réponse sera nécessairement en JSON-RPC.
 
-D'autres sont possibles biens sûr.
+D'autres sont possibles bien sûr.
 
 Vous aurez un point d'entrée pour chaque type de requête que vous voulez prendre en charge dans votre application.
 
@@ -34,7 +34,7 @@ via la propriété @@P@request@@ du coordinateur. Ce dernier est accessible via 
   $myfooValue = jApp::coord()->request->getParam('foo');
 </code>
 
-Mais dans un contrôleur, vous avez à votre disposition une méthode "raccourci" :
+Mais dans un contrôleur, vous avez à votre disposition une méthode "raccourcie" :
 
 <code php>
     $myfooValue = $this->param('foo');
