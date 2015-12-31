@@ -172,7 +172,7 @@ pour que cela fonctionne.
 
 C'est une option valable pour toutes les commandes depuis la version 1.3.3. Elle
 vous permet d'afficher les détails de ce qu'à fait la commande après son
-exécution. Par défaut, une commande n'affiche rien dans la console, sauf si les
+exécution. Par défaut, une commande n'affiche rien dans la console, à l'exception des
 erreurs. Si vous voulez afficher les détails à chaque fois, vous pouvez modifier
 la configuration de jelix-scripts avec l'option @@verboseMode=true@@. Voir
 ci-dessous.
@@ -183,7 +183,7 @@ ci-dessous.
 Les commandes de création d'application, de module etc respectent une
 arborescence précise. Mais ce n'est pas forcément celle que vous voulez
 utiliser. Il y a aussi des informations qui sont insérées dans les fichiers
-crées, notamment dans les commentaires d'en-tête, comme par exemple le nom de
+créés, notamment dans les commentaires d'en-tête, comme par exemple le nom de
 l'auteur, le site web etc. Vous pouvez changer cela.
 
 Pour ce faire, dans @@F@lib/jelix-scripts/templates/@@, il y a un fichier
@@ -224,7 +224,7 @@ php cmd.php  createmodule [MonModule]
 <code>
 php cmd.php  createdao [MonModule] [MonDao] [MaTable]
 </code>
-   * Création d'une classe basé sur un dao
+   * Création d'une classe basée sur un dao
 <code>
 php cmd.php  createclassfromdao [MonModule] [MaClasse] [MonDao]
 </code>
