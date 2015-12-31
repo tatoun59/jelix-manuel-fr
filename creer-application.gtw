@@ -28,7 +28,7 @@ contenu est :
      var/overloads/ contiendra les différents fichiers qui redéfinissent des fichiers de modules que vous aurez récupéré
      www/          racine du répertoire public de votre application
 
-Vous avez aussi un nouveau répertoire @@F@temp/myapp@@, où seront stockés tout
+Vous avez aussi un nouveau répertoire @@F@temp/myapp@@, où seront stockés tous
 les fichiers de caches créés par Jelix.
 
 Maintenant vous devez configurer votre serveur avant de lancer votre application
