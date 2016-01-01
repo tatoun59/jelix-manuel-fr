@@ -81,7 +81,7 @@ modules. Voici un exemple:
 
 La configuration du framework est stockée dans un fichier de type "ini". Il
 s'agit d'un fichier contenant des sections, débutant par un nom entre crochets.
-Chacune de ces sections contenant une série de paramètres "nom=valeur". Il y a
+Chacune de ces sections contient une série de paramètres "nom=valeur". Il y a
 une section "générale", qui n'a pas de nom, et dont les paramètres sont en début
 du fichier.
 
@@ -91,7 +91,7 @@ Les fichiers de configuration sont situés dans @@F@var/config/@@.
 === mainconfig.ini.php ===
 
 Chaque point d'entrée peut avoir son fichier de configuration spécifique. Mais la plupart
-du temps ils ont beaucoup de valeurs de paramètres identiques entre eux. Pour éviter de
+du temps, ils ont beaucoup de valeurs de paramètres identiques entre eux. Pour éviter de
 répéter ces paramètres identiques dans chaque fichier, il y a un fichier de configuration
 commun, qui a pour nom @@F@mainconfig.ini.php@@. Il est automatiquement lu, en plus du
 fichier spécifique au point d'entrée, et il n'est pas besoin de l'indiquer dans les points
@@ -166,7 +166,7 @@ Pour le fichier de configuration de xmlrpc.php, on pourrait avoir par exemple :
 etc.
 
 
-=== Comment sont-ils lu ===
+=== Comment sont-ils lus ===
 
 Il faut savoir qu'il existe un fichier @@F@defaultconfig.ini.php@@,
 situé dans le répertoire @@F@lib/jelix/core/@@. Il contient une liste exhaustive
@@ -180,7 +180,7 @@ dans l'ordre suivant et les fusionne :
   - @@F@localconfig.ini.php@@
   - @@F<entrypoint>/config.ini.php@@
 
-Les valeurs contenues dans un fichier "écrasent" celles du fichiers précédent.
+Les valeurs contenues dans un fichier "écrasent" celles du fichier précédent.
 
 
 ===== Le fichier profiles.ini.php =====
@@ -196,14 +196,14 @@ deux noms séparés par ":":
 
    * Le premier nom est le nom d'un type de connexion (correspondant au
      composant qui l'utilise)
-   * Le deuxième est le nom du profil, choisi par vous même. Deux noms ont une
+   * Le deuxième est le nom du profil, choisi par vous-même. Deux noms ont une
      signification spéciale. Le nom de profil "default" qui est le profil par
      défaut utilisé quand on n'indique pas de profil au composant. Et le nom
      "__common__".
 
 Le contenu de la section contient les paramètres de connexions.
 
-Exemple, d'un profil de connexion pour jDb, le composant d’accès aux bases de
+Exemple d'un profil de connexion pour jDb, le composant d’accès aux bases de
 données :
 
 <code ini>
@@ -241,7 +241,7 @@ Un alias ne doit pas indiquer le nom d'un autre alias.
 
 === Paramètres communs ===
 
-Il est possible de définir des paramètres qui sont communs à tout les profils
+Il est possible de définir des paramètres qui sont communs à tous les profils
 d'un même type. Cela évite de les répéter dans chaque profil. Pour ce faire, il
 faut les déclarer dans un profil spécial, @@__common__@@.
 
