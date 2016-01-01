@@ -1,6 +1,6 @@
 ~~LANG:EN@enman:controllers~~
 
-Les contrôleurs sont les objets qui vont effectuer les actions correspondantes à
+Les contrôleurs sont les objets qui vont effectuer les actions correspondant à
 chacune des urls de votre application.
 
 Un contrôleur possède une ou plusieurs méthodes correspondant à des actions, qui
