@@ -45,14 +45,14 @@ dans l'application.
 Un module est un répertoire contenant au moins un fichier [[configuration#module.xml|module.xml]],
 qui contient certaines informations à propos de ce module : version, dépendances... 
 
-Et vous avez un certain nombre de répertoires, en fonction de ce que fourni le module, et
+Et vous avez un certain nombre de répertoires, en fonction de ce que fournit le module, et
 contenant chacun des fichiers spécifiques. Voici les répertoires possibles :
 
 ; @@F@controllers/@@ : les classes utilisées lorsque les URLs correspondantes sont appellées
 ; @@F@classes/@@ : classes métiers, utilitaires, listener pour les évènements...
 ; @@F@templates/@@ : fichier des contenus à envoyer au navigateur
 ; @@F@responses/@@ : objets réponses que le module peut fournir pour l'application entière
-; @@F@locales/@@ : fichiers "properties", contenant les traductions pour les templates ou controleurs
+; @@F@locales/@@ : fichiers "properties", contenant les traductions pour les templates ou contrôleurs
 ; @@F@zones/@@ : classes gérant des parties de pages HTML
 ; @@F@daos/@@ : fichiers de mapping avec une base de données
 ; @@F@forms/@@ : fichiers déclarant les formulaires
@@ -79,7 +79,7 @@ application :
    php cmd.php createmodule monmodule
 </code>
 
-Cela vous créé un module de nom "monmodule" dans le répertoire @@F@modules/@@ de
+Cela vous crée un module de nom "monmodule" dans le répertoire @@F@modules/@@ de
 l'application, ainsi que l'arborescence classique d'un module et un contrôleur
 par défaut.
 
@@ -105,8 +105,8 @@ options.
 
 ===== Indiquer le numéro de version et les dépendances =====
 
-Après avoir créer le module, vous devez vérifier que le numéro de version
-initial est bon pour vous. Par défaut, c'est 0.1pre. Vous devez aussi
+Après avoir créé le module, vous devez vérifier que le numéro de version
+initiale est bon pour vous. Par défaut, c'est 0.1pre. Vous devez aussi
 éventuellement indiquer les dépendances. Ces deux choses sont très importantes
 pour le système d'installation de jelix.
 
