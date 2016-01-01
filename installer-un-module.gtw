@@ -1,15 +1,15 @@
 ~~LANG:EN@enman:installing-a-module~~
 
 Cette section ne concerne pas les modules fraîchement créés avec la commande
-@@c@createmodule@@, puisque celle-ci leurs assigne automatiquement un niveau
+@@c@createmodule@@, puisque celle-ci leur assigne automatiquement un niveau
 d'accès et les installe. Par contre, pour créer un module "à la main" ou
 utiliser un module existant fourni avec jelix ou provenant d'un autre projet, il
-faut suivre les instructions qui suivent.
+faut respecter les instructions qui suivent.
 
 
 ===== Niveau d'accès aux modules =====
 
-Il ne suffit pas d'avoir un module dans un dépôt de module pour que celui-ci
+Il ne suffit pas d'avoir un module dans un dépôt de modules pour que celui-ci
 soit utilisable directement. Il faut aussi indiquer de quelle manière il sera
 possible d'y accéder, avant de "l'installer". Ceci pour améliorer la sécurité et
 éviter des dysfonctionnements. En effet, il se peut que vous ayez un dépôt de
@@ -18,7 +18,7 @@ certains de ses modules soient utilisables par votre application.
 
 Pour ce faire, il y a une section "modules" dans le fichier
 @@F@mainconfig.ini.php@@, qui doit contenir le niveau d'accès de chaque
-module. Il suffit donc d'indiquer le nom d'un module, suivit de ".access", et de
+module. Il suffit donc d'indiquer le nom d'un module, suivi de ".access", et de
 lui attribuer un chiffre. La signification de ce chiffre :
 
    * 0: le module n'est pas du tout utilisé. C'est l'état par défaut d'un module
@@ -47,7 +47,7 @@ Dans cet exemple, les modules testapp, junittests et jauth sont activés normale
 modules jacl2db et jauthdb ne sont activés que pour un usage "interne", donc ne
 sont pas accessibles depuis le web, et seuls d'autres modules peuvent appeler
 leurs daos, templates etc. Le module jacldb n'est pas du tout activé. Il n'est
-pas utilisable, et est "invisible" pour tout les modules.
+pas utilisable, et est "invisible" pour tous les modules.
 
 Bien sûr, si vous avez plusieurs points d'entrée, vous avez alors forcément des
 modules utilisables par certains points d'entrées et pas par d'autres. Il faut
