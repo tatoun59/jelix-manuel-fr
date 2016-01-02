@@ -175,12 +175,12 @@ protected $allowed_parameters = array(
     );
 </code>
 
-Ici si le nom du paramètre vaut //true// c'est qu'il est obligatoire, //false// sinon.
+Ici, si le nom du paramètre vaut //true// c'est qu'il est obligatoire, //false// sinon.
 
 === Récupération ===
 
 Dans les actions de votre controller cmdline vous allez vouloir récupérer les
-paramètres passés au script. Pour cela il faut utiliser la méthode
+paramètres passés au script. Pour cela, il faut utiliser la méthode
 @@M@param('nom_parametre')@@
 
 Exemple :
@@ -202,14 +202,14 @@ public $help = array(
 );
 </code>
 
-Nous allons voir dans la partie suivante comment se servir de ce message d'aide
+Nous allons voir dans la partie suivante comment se servir de ce message d'aide.
 
 
 
 ===== Utilisation =====
 
-Pour utiliser vos scripts, c'est à dire vos actions de vos contrôleurs cmdline,
-rendez vous en ligne de commande dans le répertoire @@F@myapp/scripts/@@.
+Pour utiliser vos scripts, c'est-à-dire vos actions de vos contrôleurs cmdline,
+rendez-vous en ligne de commande dans le répertoire @@F@myapp/scripts/@@.
 
 Il suffit alors de lancer le script @@F@cmdline.php@@ suivi de l'action à lancer
 (en utilisant le sélecteur d'action) et suivi du/des options et du/des
