@@ -73,7 +73,7 @@ Ainsi, l'action qui permet d'appeler les méthodes contrôleur de l'exemple, est
 d'une méthode.
 
 Avec l'url obtenu par @@jUrl::get("leModule~exemple:")@@, vous pouvez alors appeler
-dans vos scripts javascripts, via xmlHttpRequest par exemple, l'une des quatre
+dans vos scripts javascript, via xmlHttpRequest par exemple, l'une des quatre
 méthodes du contrôleur, simplement en indiquant à xmlHttpRequest que vous voulez
 utiliser GET, POST, DELETE ou PUT.
 
