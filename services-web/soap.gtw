@@ -14,7 +14,7 @@ avez juste à indiquer une valeur PHP à l'objet réponse SOAP de jelix.
 Jelix s'occupe aussi de générer le contenu WSDL automatiquement.
 
 Il va vous falloir tout de même créer un point d'entrée spécifique, et de suivre
-une syntaxe assez précise (mais trés simple) dans les commentaires de chaque
+une syntaxe assez précise (mais très simple) dans les commentaires de chaque
 méthode de vos contrôleurs SOAP.
 
 
@@ -138,7 +138,7 @@ contrôleurs.
 Pour indiquer les paramètres SOAP auxquels s'attend la méthode, il faut ajouter
 des tags "@param", avec lesquels on indique le type de paramètre, et le nom du
 paramètre. Pour indiquer le type de la valeur de retour, il faut utiliser le mot
-clé "@return" suivit du type.
+clé "@return" suivi du type.
 
 Les types par défaut que l'on peut indiquer sont les suivants : string, integer,
 int, boolean, float.
@@ -148,7 +148,7 @@ Si on veut utiliser un tableau, on ajoutera @@[]@@ :
     @param string[] $tableau_de_chaine
 </code>
 
-S'l s'agit d'un tableau associatif, on utilisera @@[=>]@@:
+S'il s'agit d'un tableau associatif, on utilisera @@[=>]@@:
 
 <code>
     @param string[=>] $tableau_de_chaine_associatif
@@ -158,7 +158,7 @@ On peut faire ça avec tous les types.
 
 ==== Types personnalisés ====
 
-Vous pouvez aussi utiliser vos propres types, c'est à dire vos propres objets
+Vous pouvez aussi utiliser vos propres types, c'est-à-dire vos propres objets
 (faire l'équivalent des //complextype// en XMLSchema). La déclaration de vos
 classes doit être incluse dans le fichier du contrôleur, soit directement, soit
 via un @@include@@.
@@ -258,7 +258,7 @@ de moyen pour renvoyer automatiquement un fichier WSDL qui déclarerait les
 services SOAP de toute votre application.
 
 Remarque : ce type d'url est disgracieux, et vous pouvez parfaitement configurer
-les urls significatives pour avoir des choses plus simple comme
+les urls significatives pour avoir des choses plus simples comme
 
    http://monsite.com/index/jsoap/unModule/unControleur
 
@@ -310,7 +310,7 @@ exemple en PHP utilisant l'extension SOAP :
 ===== Appeller un service SOAP avec Jelix =====
 
 Si votre application Jelix a besoin d'appeler un serveur soap, vous pouvez
-utiliser @@C@jSoapClient@@. C'est une classe qui renvoi un objet
+utiliser @@C@jSoapClient@@. C'est une classe qui renvoie un objet
 @@C@SoapClient@@ préconfiguré avec les paramètres stockés dans un profil de
 connexion, donc dans @@F@var/config/profiles.ini.php@@, comme pour jDb.
 
@@ -350,7 +350,7 @@ soap_version = SOAP_1_1
 classmap = '{"soaptype":"myclass", "soaptype2":"myclass2"}'
 </code>
 
-Les classes que vous indiquez doivent être déjà chargée avec l'appel à @@jSoapClient::get()@@.
+Les classes que vous indiquez doivent être déjà chargées avec l'appel à @@jSoapClient::get()@@.
 
 Une alternative fournie depuis Jelix 1.5, est de déclarer ce mapping dans un fichier
 ini séparé, et d'indiquer ce fichier dans une propriété @@classmap_file@@.
