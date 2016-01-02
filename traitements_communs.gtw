@@ -3,13 +3,13 @@
 Il y a plusieurs types de traitements : les traitements métiers, et ceux dédiés
 à la génération de la page web. Pour les traitements métiers, vous utiliserez
 des classes métiers, des classes services, des daos. Celles-ci pouvant être
-utilisable par tous les modules, c'est un premier moyen de réaliser des
+utilisables par tous les modules, c'est un premier moyen de réaliser des
 traitements métiers qui puissent être réutilisables. Voir [[/utilisation-classes]].
 
 Pour ce qui concerne la génération d'une page, c'est un peu plus complexe que ça
 car il y a plusieurs façons de faire. Nous sommes donc devant le cas suivant :
 nous avons plusieurs pages qui ont des parties communes. Cela peut être par
-exemple un bandeau, un pied de page, un menu sur le coté etc.. Il peut y avoir
+exemple un bandeau, un pied de page, un menu sur le coté etc... Il peut y avoir
 aussi quelques pages qui ont un peu plus que ça en commun. Voici diverses
 solutions selon le contexte.
 
@@ -62,7 +62,7 @@ commune qui va réaliser le travail commun.
 ===== Héritage de contrôleurs =====
 
 Si plusieurs actions de plusieurs contrôleurs ont des traitements en commun,
-alors vous pouvez utiliser le mécanisme d'héritage objet. C'est à dire réaliser
+alors vous pouvez utiliser le mécanisme d'héritage objet. C'est-à-dire réaliser
 un contrôleur de base, qui ne sera pas utilisé directement, mais dont hériteront
 les contrôleurs concernés.
 
@@ -109,8 +109,8 @@ class defaultCtrl extends myBaseController {
 Notez l'include et le //extends myBaseController//;
 
 Bien sûr, le contrôleur de base peut contenir des propriétés, d'autres méthodes,
-voire des méthodes d'actions. C'est à dire que vous pouvez ainsi avoir plusieurs
-contrôleurs qui possèdent au final des actions communes (qui peuvent elle-même
+voire des méthodes d'actions. C'est-à-dire que vous pouvez ainsi avoir plusieurs
+contrôleurs qui possèdent au final des actions communes (qui peuvent elles-mêmes
 tenir compte de propriétés ou d'autres méthodes pour gérer des différences).
 
 Vous pouvez faire par exemple un contrôleur de base, qui définit une série
