@@ -26,9 +26,9 @@ mieux avoir ce genre de liste d'actions :
    * une action "prepare" qui prépare les données pour un nouveau formulaire
      (initialisation en session par exemple, avec lecture des données initiales
      en base de données par exemple) et redirige vers "show"
-   * une action "show" qui affiche le formulaire avec les données en sessions,
+   * une action "show" qui affiche le formulaire avec les données en session,
      et affiche les éventuelles erreurs de saisie.
-   * une action "save" qui vérifie les données saisies. Si il y a des erreurs,
+   * une action "save" qui vérifie les données saisies. S'il y a des erreurs,
      les sauve en session et redirige vers "show", ou alors sauve les données et
      redirige vers "end"
    * une action "end", qui nettoie les données en session, et affiche une page
@@ -114,7 +114,7 @@ paramètres dans les appels aux deux plugins de templates @@formurl@@ et
 Dans l'action servant à traiter les données, vous récupèrerez celles-ci grâce à
 @@$this->param('champs')@@ dans votre contrôleur. Vous avez d'autres méthodes
 similaires, comme @@$this->intParam('champs')@@, @@$this->floatParam('champs')@@
-et @@$this->boolParam('champs')@@, qui permettent de récupérer directement les
+et @@$this->boolParam('champs')@@ qui permettent de récupérer directement les
 valeurs sous un type particulier (voir [[controleurs|la page sur les contrôleurs]]).
 
 Vous pouvez utiliser en plus jFilter, qui est une classe permettant de vérifier
