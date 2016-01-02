@@ -57,6 +57,6 @@ les pseudo attributs à mettre sur la processing instruction générée.
 </code>
 
 Note : comme pour la réponse HTML, vous pouvez indiquer des feuilles de styles
-qui soient stockées dans le www/ de l'application ou du module. Voir la documentation
+qui sont stockées dans le www/ de l'application ou du module. Voir la documentation
 sur les vues HTML pour savoir comment récupérer ces URLs.
 
