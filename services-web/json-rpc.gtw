@@ -2,7 +2,7 @@
 
 Jelix propose la prise en charge du protocole [[http://json-rpc.org/|json-rpc]].
 Ce protocole d'échange est similaire à XML-RPC dans le fonctionnement, mais
-utilise JSON comme format de donnée au lieu de XML (RPC = Remote Procedure
+utilise JSON comme format de données au lieu de XML (RPC = Remote Procedure
 Call).
 
 ===== Point d'entrée spécifique =====
@@ -27,7 +27,7 @@ $jelix->process(new jJsonRpcRequest());
 
 </code>
 
-Il ne faut oublier de déclarer ce point d'entrée au niveau de la configuration
+Il ne faut pas oublier de déclarer ce point d'entrée au niveau de la configuration
 des moteurs d'urls simple ou significant. Si vous utilisez
 [[/urls/simple|le moteur d'url simple]], vous devez mettre dans la section
 //simple_urlengine_entrypoints// de la configuration de jelix la déclaration
@@ -115,7 +115,7 @@ array ou autre), la transformation de la chaine json étant réalisée par
 
 Notez qu'un script javascript est fourni dans @@F@lib/jelix-www/js/json.js@@. Il
 vous permet, dans vos pages HTML de transformer vos données javascript en chaine
-json. Pour cela, sur les objets, tableaux et autre type de donnée javascript, il
+json. Pour cela, sur les objets, tableaux et autres types de données javascript, il
 suffit d'appeler la méthode javascript @@M@toJSONString()@@ qui renvoie une
 chaîne. Il suffit ensuite de passer cette chaîne à xmlHttpRequest pour envoyer
 la requête JSONRPC à jelix. Exemple, dans votre page HTML :
@@ -136,7 +136,7 @@ la requête JSONRPC à jelix. Exemple, dans votre page HTML :
  var resultat = reponse.result;
 </code>
 
-Enfin si dans l'action jelix, vous avez fait un 
+Enfin, si dans l'action jelix vous avez fait un 
 
 <code php>
   $rep->response = "hello";
