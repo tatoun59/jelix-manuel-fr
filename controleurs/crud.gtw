@@ -14,7 +14,7 @@ C'est donc un contrôleur permettant de mettre en place rapidement une gestion
 d'un enregistrement de table.
 
 Note : ce contrôleur ne fonctionne que pour les tables avec une clé primaire
-simple. Si votre table possède une clé primaire composée de deux champs il faut
+simple. Si votre table possède une clé primaire composée de deux champs, il faut
 utiliser jControllerDaoCrudDfk. Pour le reste vous devrez faire votre propre
 contrôleur.
 
@@ -80,7 +80,7 @@ Voici donc ce qui est possible de faire.
 
 ==== Indiquer le profil jDb ====
 
-Si il faut utiliser un profil de connexion spécifique, indiquez le dans la
+S'il faut utiliser un profil de connexion spécifique, indiquez-le dans la
 propriété //$dbProfil// :
 
 <code php>
@@ -105,7 +105,7 @@ Comme vous le voyez, rien n'est fait au niveau de la réponse (à part dans chaq
 action l'assignation d'un contenu principal dans la variable de template
 "MAIN"). Ainsi, pas de déclaration de template principal (bodyTpl), pas de
 feuille de style ou autre. Le contrôleur s'attend en effet à ce que l'objet
-renvoyé par //getResponse// soit un objet réponse crée par vos soins et communs
+renvoyé par //getResponse// soit un objet réponse créé par vos soins et commun
 à tous vos contrôleurs.
 
 Si vous voulez donc changer ça, redéfinissez donc cette méthode en y ajoutant ce
@@ -120,8 +120,8 @@ que vous voulez. Exemple:
     }
 </code>
 
-Ainsi la page de liste des enregistrements, de vue et d'édition d'un
-enregistrement etc auront une feuille de style admin.css et un menu qui est
+Ainsi, les page sde liste des enregistrements, de vue et d'édition d'un
+enregistrement, etc, auront une feuille de style admin.css et un menu qui est
 généré par la zone adminmenu.
 
 
@@ -170,8 +170,8 @@ Les templates par défaut utilisés par le contrôleur sont indiqués dans les p
 </code>
 
 
-Vous pouvez bien sûr les [[/themes|surcharger dans un thème]], soit en indiquer
-d'autres que vous aurez crées dans vos propres modules.
+Vous pouvez bien sûr les [[/themes|surcharger dans un thème]], ou en indiquer
+d'autres que vous aurez créés dans vos propres modules.
 
 === Variables de template ===
 
@@ -258,7 +258,7 @@ et le sens :
 Si ce n'est pas suffisant, vous pouvez redéfinir la méthode
 **_indexSetConditions()**, qui accepte en paramètre un objet jDaoConditions que
 vous pouvez compléter pour spécifier des critères de sélections des
-enregistrements à afficher, l'ordre d'affichage..
+enregistrements à afficher, l'ordre d'affichage.
 
 === Configuration avancée de la liste ===
 
@@ -274,7 +274,7 @@ Elle est affichée par les actions //precreate//, //create//, //savecreate//.
 
 L'action //precreate// crée et prépare le formulaire puis redirige vers l'action
 //create//. L'action //create// affiche le formulaire pour éditer le nouvel
-enregistrement, et envoi les données vers l'action //savecreate//. Cette
+enregistrement, et envoie les données vers l'action //savecreate//. Cette
 dernière action vérifie le contenu du formulaire, et enregistre les données si
 c'est ok.
 
@@ -297,7 +297,7 @@ Elle est affichée et gérée par les actions  //preupdate//, //editupdate// et 
 Le processus suit le même schéma que pour la création d'un enregistrement.
 //preupdate// crée et prépare le formulaire et redirige vers l'action
 //editupdate//. L'action //editupdate// affiche le formulaire pour éditer
-l'enregistrement, et envoi les données vers l'action //saveupdate//. Cette
+l'enregistrement, et envoie les données vers l'action //saveupdate//. Cette
 dernière action vérifie le contenu du formulaire, et enregistre les données si
 c'est ok.
 
