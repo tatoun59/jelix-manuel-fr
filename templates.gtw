@@ -94,7 +94,7 @@ cette méthode le sélecteur du fichier de template.
 </code>
 
 L'appel de cette méthode n'est indispensable que dans le cas où vous avez
-instancié vous même l'objet @@C@jTpl@@.
+instancié vous-même l'objet @@C@jTpl@@.
 
 Il existe une autre méthode, mais que vous n'appellerez certainement jamais
 puisque les objets @@C@jResponse@@ le font à votre place : @@M@display@@.
@@ -112,7 +112,7 @@ en rapport avec le type de la réponse. Il contient aussi des instructions pour
 incorporer des valeurs que vous aurez fournies, des instructions pour générer
 répétitivement des portions de HTML etc.
 
-La syntaxe utilisée dans @@C@jTpl@@ est à mi chemin entre celle utilisée dans le
+La syntaxe utilisée dans @@C@jTpl@@ est à mi-chemin entre celle utilisée dans le
 moteur de template Smarty, et la syntaxe PHP. Le but étant d'avoir des templates
 suffisamment lisibles, faciles à modifier en n'imposant pas une syntaxe trop
 éloignée de PHP, tout en proposant des facilités que ne possède pas PHP et
@@ -300,8 +300,8 @@ Exemple : ici le modificateur @@jdatetime@@, prenant deux paramètres de type ch
 
 ==== Les structures de contrôle ====
 
-Elles sont équivalentes à celle en PHP, excepté que les expressions ou
-conditions n'ont pas besoin d'être encadrés par des parenthèses.
+Elles sont équivalentes à celles en PHP, excepté que les expressions ou
+conditions n'ont pas besoin d'être encadrées par des parenthèses.
 
 === if, else, elseif ===
 
@@ -381,7 +381,7 @@ Une deuxième solution est de déclarer les modificateurs ou fonctions à la vol
 au moteur de template. Vous avez pour cela deux méthodes
 @@M@registerModifier()@@ et @@M@registerFunction()@@. Vous leur indiquez le nom
 "jtpl" du modificateur ou de la fonction, ainsi que le nom de la fonction php
-qui sera executée par le template. Cette fonction doit accepter les même
+qui sera executée par le template. Cette fonction doit accepter les mêmes
 arguments que pour une fonction de plugin de template.
 
 
@@ -433,7 +433,7 @@ Exemple :
   {meta_html js 'fooscript.js'}
   {meta_html bodyattr array('onload'=>'alert("charge")')}
 
-Bien sûr vous pouvez réaliser le vôtre.
+Bien sûr, vous pouvez réaliser le vôtre.
 
 ===== Templates Virtuels =====
 
@@ -471,10 +471,10 @@ world
 Vous pouvez ensuite utiliser ce contenu pour l'injecter dans un autre template par exemple.
 
 
-===== Templates localisées =====
+===== Templates localisés =====
 
 Dans un template, nous avons vu que nous pouvons utiliser {@truc.foo@} pour
-inclure des chaînes localisés. Cependant, il peut arriver qu'il y en ai beaucoup
+inclure des chaînes localisées. Cependant, il peut arriver qu'il y en ai beaucoup
 dans un même template, pouvant rendre alors celui-ci pas très lisible, et
 surtout plus lent à s'afficher.
 
@@ -484,12 +484,12 @@ maintenance versus performance.
 
 Pour faire un template pour chaque langue, créer des sous-repertoires dans le
 repertoire de templates, et qui ont pour nom le code de la langue. Exemple, dans
-un module: @@F@templates/fr_FR@@, @@F@templates/en_US@@ etc.. Et placez y dans
-chacun d'eux un exemplaire de votre template traduit.
+un module: @@F@templates/fr_FR@@, @@F@templates/en_US@@ etc.. Et placez-y dans
+chacun d'eux, un exemplaire de votre template traduit.
 
 ===== Inclusion de templates dans un template =====
 
-Il y a des cas où vous voudriez partager du contenu de template entre plusieurs
+Il y a des cas où vous voudrez partager du contenu de template entre plusieurs
 templates. Pour ce faire, vous créerez un template contenant ce code commun, et
 utiliserez la balise @@{include}@@. Vous devez lui donner le selecteur du
 template à inclure en paramètre.
@@ -520,7 +520,7 @@ dans @@F@var/themes/default/@@, il est possible d'ajouter d'autres thèmes en
 ajoutant simplement des répertoires dans @@F@var/themes@@, par exemple
 @@F@var/themes/mon_theme@@.
 
-Ainsi @@F@var/themes/mon_theme/mon_module/mon_template.tpl@@ redéfini le
+Ainsi @@F@var/themes/mon_theme/mon_module/mon_template.tpl@@ redéfinit le
 template @@mon_template@@ du module @@mon_module@@ pour le thème @@mon_theme@@.
 
 Pour plus de détails, voir la page sur les [[themes|thèmes]].
