@@ -1,8 +1,8 @@
 ~~LANG:EN@enman:daos/file~~
 
 Pour utiliser jDao, il faut d'abord décrire dans un fichier XML le mapping
-objet-relationnel, c'est à dire indiquer dans ce fichier la correspondance entre
-les propriétés de l'objet DAO et les champs d'une ou plusieurs tables
+objet-relationnel, c'est-à-dire indiquer dans ce fichier la correspondance entre
+les propriétés de l'objet DAO et les champs d'une ou plusieurs tables.
 
 
 ===== Création automatique =====
@@ -26,7 +26,7 @@ Dans le répertoire @@F@daos@@ du module //myshop// vous allez donc avoir un
 fichier XML @@F@product.dao.xml@@ qui va contenir la description du mapping. Le
 nom de la table est optionnel si vous voulez utiliser le même nom de dao que
 celui de la table, et que vous n'avez pas de séquence. Indiquez le nom de la
-séquence utilisée pour auto incrémenter la clé primaire (paramètre nécessaire
+séquence utilisée pour auto-incrémenter la clé primaire (paramètre nécessaire
 pour les bases oracles et parfois postgresql).
 
 Bien que la génération automatique permette de gagner du temps, il faut souvent
@@ -160,8 +160,8 @@ mysql, jDao utilisera en fait le type @@longblob@@.
 Les valeurs des champs seront convertis dans le type PHP le plus approprié, la
 plupart du temps, une chaine.
 
-Pour les champs auto incrementés, vous pouvez indiquer le type @@serial@@ ou
-@@autoincrement@@. Mais dans certain cas, il est préférable d'indiquer le type
+Pour les champs auto-incrementés, vous pouvez indiquer le type @@serial@@ ou
+@@autoincrement@@. Mais dans certains cas, il est préférable d'indiquer le type
 d'entier (@@integer@@, @@tinyint@@..) et de mettre un attribut
 @@A@autoincrement@@ à @@true@@. Sur certaines bases, on peut associer une
 séquence à un champ. L'attribut @@A@sequence@@ doit alors indiquer son nom.
@@ -174,7 +174,7 @@ Les attributs @@A@updatepattern@@, @@A@insertpattern@@ et @@A@selectpattern@@
 permettent d'indiquer un "motif" à appliquer lors de la mise à jour, l'insertion
 ou la lecture de la valeur du champ dans la table. Ce motif doit en fait être
 une expression SQL, contenant éventuellement la chaîne "%s" qui sera remplacée
-par la valeur ou le nom du champ. Par défaut leurs valeurs vaut "%s". Si on
+par la valeur ou le nom du champ. Par défaut, leurs valeurs vaut "%s". Si on
 indique une valeur vide, cela correspond à une opération nulle (le champ n'est
 pas lu, inséré ou mis à jour). Vous pouvez utiliser @@A@insertpattern@@ et
 @@A@selectpattern@@ sur des clés primaires, mais pas @@A@updatepattern@@.
@@ -280,7 +280,7 @@ faire cela, voyez plutôt les "méthodes XML/PHP" de la factory. Les méthodes f
 par votre classe seront plutôt des méthodes qui calculent par exemple des valeurs de champs,
 qui vérifient des rêgles de gestion etc...
 
-Votre classe aura le nom que vous voudrez, et stockée dans le répertoire @@F@daos/@@ d'un module,
+Votre classe aura le nom que vous voudrez, et sera stockée dans le répertoire @@F@daos/@@ d'un module,
 sous le nom @@<nomclasse>.daorecord.php@@.
 
 Vous indiquerez alors le sélecteur de cette classe @@<nommodule>~<nomclasse>@@ dans un attribut
@@ -296,7 +296,7 @@ Exemple, dans le fichier dao :
    </record>
 </code>
 
-Les enregistrements seront donc de la classe @@C@news@@ situées dans le fichier @@F@daos/news.daorecord.php@@
+Les enregistrements seront donc de la classe @@C@news@@ située dans le fichier @@F@daos/news.daorecord.php@@
 du module @@news@@.
 
 <code php>
@@ -312,7 +312,7 @@ class news extends jDaoRecordBase {
 
 ===== Importation de dao =====
 
-Dans vos projet, vous aurez parfois besoin de vous calquer sur un dao déjà
+Dans vos projets, vous aurez parfois besoin de vous calquer sur un dao déjà
 existant afin de créer votre propre dao. Afin de vous éviter de retranscrire
 tout le contenu du dao initial avec des propriétés et méthodes qui resteront
 inchangés, vous avez la possibilité de l'importer via l'attribut @@A@import@@
@@ -359,5 +359,5 @@ Voici donc par exemple votre dao "mymodule~mycustomuser" :
 Ici, vous aurez donc défini simplement un dao personnalisé pour jauth , tout en
 respectant les critères de base requis (propriétées @@P@login@@ et
 @@P@password@@, methodes @@M@getByLoginPassword@@, @@M@getByLogin@@, etc...)
-grace à l'import de @@L@jauthdb~jelixuser@@.
+grâce à l'import de @@L@jauthdb~jelixuser@@.
 
