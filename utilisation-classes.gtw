@@ -9,8 +9,8 @@ issues de daos ou autre, effectuerez donc des traitements autres que de
 l'affichage. Aussi les méthodes de vos contrôleurs s'en trouveront allégées et
 les traitements réutilisables dans d'autres actions.
 
-Elles peuvent être instanciée par jClasses (un "loader" de classes, plus ou
-moin obsolète), ou instanciée normalement, le chargement de la classe utilisant
+Elles peuvent être instanciées par jClasses (un "loader" de classes, plus ou
+moins obsolète), ou instanciées normalement, le chargement de la classe utilisant
 le mécanisme d'autoload de Jelix.
 
 
@@ -21,7 +21,7 @@ le mécanisme d'autoload de Jelix.
 Les classes métiers et services dans Jelix sont des classes PHP classiques qui
 n'ont rien de spécifique. La seule chose à respecter est de les stocker dans un
 fichier @@F@nom_de_la_classe.class.php@@ dans le répertoire @@F@classes/@@ du
-module, pour pouvoir être chargée par @@C@jClasses@@:
+module, pour pouvoir être chargées par @@C@jClasses@@:
 
 <code php>  
    class StockService {
@@ -44,15 +44,15 @@ service fournit, comme son nom l'indique, un service. Elle n'a pas besoin d'êtr
 instanciée à chaque utilisation car elle ne possède pas de propriétés
 "discriminantes". Une seule instance suffit pour toute l'application.
 
-Par exemple une classe de type "factory", qui permet de récupérer des ensembles
-de données, est une classe service. Par contre une classe représentant un
+Par exemple, une classe de type "factory", qui permet de récupérer des ensembles
+de données, est une classe service. Par contre, une classe représentant un
 produit, qui possède donc des champs identifiants, est une classe non service.
 
 
 ==== Instanciation d'une classe avec jClasses ====
 
 Jelix propose la classe @@C@jClasses@@, qui vous évite d'avoir à faire un
-include et une instanciation par vous même.
+include et une instanciation par vous-même.
 
 jClasses fournit deux méthodes statiques, auxquelles vous indiquez un sélecteur :
 
@@ -60,7 +60,7 @@ jClasses fournit deux méthodes statiques, auxquelles vous indiquez un sélecteu
     * @@M@getService($selecteurDeClasse)@@
 
 
-La première créera à chaque appel une nouvelle instance. Par contre la deuxième
+La première créera à chaque appel une nouvelle instance. Par contre, la deuxième
 renverra toujours une même instance de la classe. @@M@getService@@ sera donc
 utilisé sur les classes services, et @@M@createInstance@@ sur les autres.
 
@@ -87,7 +87,7 @@ Dans certains cas, comme celui où le constructeur de la classe métier demande 
 paramètre, il faut inclure la classe métier puis l'instancier "manuellement".
 
 Dans ce cas la classe jClasses propose la méthode statique
-@@M@inc($selecteurDeClasse)@@. Comme son nom l'indique elle inclut (en fait
+@@M@inc($selecteurDeClasse)@@. Comme son nom l'indique, elle inclut (en fait
 effectue un require_once) la classe spécifiée par le sélecteur.
 
 Exemple :
@@ -183,8 +183,8 @@ Voici un exemple :
 </module>
 </code>
 
-Comme vous le voyez, il y a plusieurs façon de déclarer une classe. Les chemins
-des fichiers ou répertoires à indiquer dans les balises doivent être relatif au
+Comme vous le voyez, il y a plusieurs façons de déclarer une classe. Les chemins
+des fichiers ou répertoires à indiquer dans les balises doivent être relatifs au
 répertoire du module.
 
 Pour charger une classe spécifique, en indiquant son nom et son fichier :
@@ -193,7 +193,7 @@ Pour charger une classe spécifique, en indiquant son nom et son fichier :
    <class name="myautoloadedclass" file="autoloadtest/autoloadtestclass.php" />
 </code>
 
-Pour déclarer plusieurs classes à la fois qui ont des noms ressemblant, on peut
+Pour déclarer plusieurs classes à la fois qui ont des noms ressemblants, on peut
 utiliser une expression régulière, et indiquer le répertoire où les fichiers se
 trouvent ainsi qu'un suffixe de fichier :
 
@@ -209,7 +209,7 @@ indique le namespace et le répertoire.
   <namespace name="jelixTests\foo" dir="autoloadtest" />
 </code>
 
-Cette déclaration suit la spécification PSR0. Aussi le namespace de la classe
+Cette déclaration suit la spécification PSR0. Aussi, le namespace de la classe
 doit correspondre à un chemin dans le répertoire indiqué. Par exemple, si Jelix
 doit charger la classe @@C@jelixTests\foo\bar\baz@@, il incluera le fichier
 @@F@autoloadtest/jelixTests/foo/bar/baz.php@@.
@@ -223,7 +223,7 @@ antérieurement à la sortie de la spécification PSR-4, d'où le nom
 </code>
 
 Le chemin du fichier de la classe n'est pas un chemin reprenant le nom du
-namespace. Mais ici toute classes correspondant au namespace se trouvent dans
+namespace. Mais ici, toutes classes correspondant au namespace se trouvent dans
 des fichiers directement dans le répertoire indiqué. Ainsi, la classe
 @@C@jelixTests\foo\bar\baz@@ n'est pas situé dans
 @@F@autoloadtest/jelixTests/foo/bar/baz.class.php@@ mais dans
@@ -251,7 +251,7 @@ N'utilisez le système autoload que pour les classes souvent utilisées. Déclar
 une multitude de classes qui ne partagent pas le même namespace n'a pas trop de
 sens, et ralentira le système autoload de PHP (si tout les modules déclarent des
 dizaines de classes, cela fait au final beaucoup de chemin à vérifier...).
-Préférez donc l'utilisation de namespaces commun, ou encore de jClasses (surtout
+Préférez donc l'utilisation de namespaces communs, ou encore de jClasses (surtout
 pour les classes peu utilisées ou utilisées uniquement par le module).
 
 
@@ -264,7 +264,7 @@ projet. Il est bien entendu tout à fait possible de le faire dans Jelix.
 ==== Avec Composer ====
 
 [[http://getcomposer.org|Composer]] est un gestionnaire de paquets et de
-dépendance pour PHP, de plus en plus utilisé. Il vous permet d'installer et de
+dépendances pour PHP, de plus en plus utilisé. Il vous permet d'installer et de
 mettre à jour facilement des bibliothèques tierces. Nous vous recommandons de
 l'utiliser si les bibliothèques tierces que vous voulez utiliser peuvent être
 installées avec Composer. (Les prochaines versions de Jelix > 1.6 seront
