@@ -32,9 +32,9 @@ dans le répertoire @@F@myapp/responses/@@. Vous pouvez ainsi personnaliser
 l'interface générale.
 
 Notez qu'avant d'exécuter cette commande, vous devez avoir configuré
-correctement l'accès à la base de donnée dans le fichier @@F@profiles.ini.php@@,
-car les tables pour jAuth et jAcl2 seront créés. Si vous préférez configurer
-jAuth et/ou jAcl2 par vous même, indiquez les options @@-noauthdb@@ et
+correctement l'accès à la base de données dans le fichier @@F@profiles.ini.php@@,
+car les tables pour jAuth et jAcl2 seront créées. Si vous préférez configurer
+jAuth et/ou jAcl2 par vous-même, indiquez les options @@-noauthdb@@ et
 @@-noacl2db@@ à la commande.
 
 Après avoir créé l'interface (et configuré jAuth et jAcl2 si vous avez choisi de
@@ -61,14 +61,14 @@ séparer l'application en deux.
 A cause de certaines contraintes (hébergement notamment) ou de certains besoins,
 vous voudriez peut-être utiliser la même configuration que le reste de
 l'application, et donc peut-être utiliser le [[/urls/significant|moteur d'urls significatives]]
-si celui ci est activé dans votre application (ce qui n'est pas
+si celui-ci est activé dans votre application (ce qui n'est pas
 le cas par défaut).
 
 Dans ce cas, il faudra effectuer quelques modifications dans votre fichier
 @@F@urls.xml@@. En effet sans cela, votre interface d'administration sera
 inaccessible puisque les urls ne seront pas connues.
 
-Tout d'abord il faut ajouter le nouveau point d'entrée pour l'admin :
+Tout d'abord, il faut ajouter le nouveau point d'entrée pour l'admin :
 
 <code xml>
  <classicentrypoint name="admin">
