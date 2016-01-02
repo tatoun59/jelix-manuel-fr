@@ -76,7 +76,7 @@ page, et trois instructions qui affichent les variables suivantes :
 
 Ces variables contiennent du code HTML qui a été indiqué lors des appels des
 méthodes @@M@addHeadContent()@@ et @@M@addContent()@@ de l'objet
-@@C@jResponseBasicHtml@@. Elles ont pu être appelée par des contrôleurs, des
+@@C@jResponseBasicHtml@@. Elles ont pu être appelées par des contrôleurs, des
 classes techniques, des plugins. C'est pourquoi il faut indiquer ces variables.
 
 Il y a une quatrième variable, @@V@$BASEPATH@@  qui contient le
@@ -107,7 +107,7 @@ Voici un exemple de fichier statique :
 Dans votre contrôleur, vous devez indiquer où @@C@jResponseBasicHtml@@ peut
 trouver ce fichier, en donnant son chemin complet dans la propriété
 @@P@$htmlFile@@. Notez que l'objet @@C@jCoordinator@@ possède une méthode
-permettant de récupérer le chemin d'un module. Il est ainsi aisée de récupérer
+permettant de récupérer le chemin d'un module. Il est ainsi aisé de récupérer
 un fichier d'un module, par exemple se trouvant dans un sous-répertoire
 @@F@static/@@ du module :
 
@@ -132,7 +132,7 @@ et la partie @@E@<body>@@ :
 {{jresponsehtml_step1.png|}}
 
 jResponseHTML s'occupe de générer le contenu de la balise @@E@<head>@@, à partir
-des informations données au travers de ses méthodes. Par contre la génération du
+des informations données au travers de ses méthodes. Par contre, la génération du
 contenu de la partie @@E@<body>@@ est de votre ressort, avec l'aide
 éventuellement d'un template. Voyons tout ça en détails.
 
@@ -142,7 +142,7 @@ contenu de la partie @@E@<body>@@ est de votre ressort, avec l'aide
 
 Pour modifier le contenu de la balise @@E@<head>@@, vous avez plusieurs méthodes
 et propriétés. Vous pouvez ainsi modifier le titre du document, le "favicon",
-les urls des feuilles de styles et des scripts javascripts à lier au document,
+les urls des feuilles de styles et des scripts javascript à lier au document,
 du CSS ou du javascript à inclure directement dans le @@E@<head>@@, ou encore
 les mots clés associés, la description de la page, et autres metas. Voyons un
 exemple qui montre l'ensemble de ces possibilités :
@@ -257,7 +257,7 @@ $rep->addContent(jZone::get('monmodule~uneZone'));
 
 Bien souvent, les pages d'un site ont un gabarit commun, et seules certaines
 zones changent (notamment le contenu principal) en fonction de l'action. Il y
-aura donc un template principal , défini comme on l'a vu précédemment, qui ne
+aura donc un template principal, défini comme on l'a vu précédemment, qui ne
 contiendra que le contenu commun à toutes les pages, et dans chaque action on
 utilisera un autre template (un "sous-template") pour générer le contenu
 spécifique, dont on injectera le résultat dans le template principal. Ce travail
@@ -290,8 +290,8 @@ des fichiers javascript à votre page HTML.
 @@M@addJSLink()@@ et @@M@addCSSLink()@@ acceptent en premier argument une URL d'un
 fichier Javascript ou d'un fichier CSS. Faites attention cependant à l'URL que vous
 indiquez. À moins que ce soit vraiment ce que vous voulez, n'utilisez pas d'URL relative
-(dependante de l'URL de la page). Car la plupart des URLs des pages de votre
-application étant vituelles (ne pointant pas vers des fichiers physiques), l'URL
+(dépendante de l'URL de la page). Car la plupart des URLs des pages de votre
+application étant virtuelles (ne pointant pas vers des fichiers physiques), l'URL
 résultante risque de ne pas être la bonne. Par exemple, @@'css/styles.css'@@
 donne @@http://exemple.com/foo/bar/css/styles.css@@ avec la page
 @@http://exemple.com/foo/bar/@@, mais donne
@@ -301,24 +301,24 @@ donnez une URL absolue (avec ou sans le nom de domaine), vous obtiendrez
 toujours le bon chemin. @@'/css/styles.css'@@ (notez le @@/@@ au début) donne
 toujours @@http://exemple.com/css/styles.css@@ quelle que soit l'URL de la page.
 
-Aussi il est recommandé d'indiquer une URL absolue, dont le chemin débute à la racine
+Aussi, il est recommandé d'indiquer une URL absolue, dont le chemin débute à la racine
 du site.
 
-Les fichiers CSS/JS peuvent être stockées dans le répertoire @@F@www/@@ de votre application
+Les fichiers CSS/JS peuvent être stockés dans le répertoire @@F@www/@@ de votre application
 ou le répertoire @@F@www/@@ d'un module.
 
 Si c'est stocké dans le répertoire @@F@www/@@ de l'application, et si ce répertoire
 est le "documentRoot" de l'application, vous pouvez indiquer simplement son chemin
-absolue. Par exemple, si vous voulez le lien vers le fichier @@F@yourapp/www/css/mystyles.css@@,
-alors vous feriez :
+absolu. Par exemple, si vous voulez le lien vers le fichier @@F@yourapp/www/css/mystyles.css@@,
+alors vous ferez :
 
 <code php>
   $resp->addCSSLink('/css/mystyles.css');
 </code>
 
-Cependant, si @@F@www/@@ n'est pas le "document root", ou si votre module est déstiné
-à être utilisé par d'autres application, ou encore que l'application peut être installée
-avec une configuration différente, il est préférable d'ajoute le "basePath" du
+Cependant, si @@F@www/@@ n'est pas le "document root", ou si votre module est destiné
+à être utilisé par d'autres applications, ou encore que l'application peut être installée
+avec une configuration différente, il est préférable d'ajouter le "basePath" du
 site web :
 
 <code php>
@@ -358,7 +358,7 @@ $rep->addCSSLink('maFeuille.css',
 </code>
 
 
-Tous les exemples précédent sur la récupération des URL des fichiers CSS,
+Tous les exemples précédents sur la récupération des URL des fichiers CSS,
 fonctionnent aussi bien pour les fichiers JS, les images et autres fichiers
 de ressources, stockés dans le répertoire @@F@www/@@ d'une application, d'un module
 ou dans le répertoire @@F@jelix-www@@.
@@ -413,9 +413,9 @@ automatiquement sur le contenu de toutes les pages HTML du site. C'est ainsi
 qu'il existe par exemple un plugin pour afficher une barre de debug, ou encore
 un autre pour "minifier" les fichiers CSS et Javascript. 
 
-Ces plugins sont des plugins de type "htmlresponse", ils doivent se trouver dans
-un répertoire @@F@htmlresponse/@@ d'un dépot de plugin. Et pour les activer, il
-faut indiquer les noms des plugins utilisé dans l'option @@plugins@@ de la
+Ces plugins sont des plugins de type "htmlresponse". Ils doivent se trouver dans
+un répertoire @@F@htmlresponse/@@ d'un dépot de plugins. Et pour les activer, il
+faut indiquer les noms des plugins utilisés dans l'option @@plugins@@ de la
 section @@jResponseHtml@@ de la configuration générale. Exemple :
 
 <code ini>
