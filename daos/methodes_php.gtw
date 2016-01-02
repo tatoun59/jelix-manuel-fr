@@ -2,11 +2,11 @@
 
 
 Les [[methodes_xml|méthodes déclarées en XML]] permettent de créer facilement
-des méthodes, et peuvent répondre à beaucoup de situations. Néanmoins elles sont
+des méthodes, et peuvent répondre à beaucoup de situations. Néanmoins, elles sont
 tout de même limitées dans la cadre de requêtes complexes. On ne peut pas créer
 des requêtes complexes.
 
-Une première solution serait de se créer une classe PHP classique, et utiliser
+Une première solution serait de se créer une classe PHP classique et utiliser
 jDb pour effectuer les requêtes. Cependant, lorsque les enregistrements sur
 lesquels on opère correspondent à ce qui a déjà été défini dans un DAO, il est
 plus logique de pouvoir intégrer une telle méthode dans la factory d'un DAO.
@@ -39,7 +39,7 @@ paramètres comme d'habitude.
 Au niveau du code PHP, vous pouvez faire presque ce que vous voulez. Cependant :
 
    * pour respecter le pattern DAO, et si vous renvoyez des résultats
-     d'enregistrement, vous devez renvoyer des objets qui sont des records du
+     d'enregistrements, vous devez renvoyer des objets qui sont des records du
      même type que ceux définis dans la DAO. Le nom de la classe du record
      correspondant se trouve dans la propriété ''_DaoRecordClassName''
    * Pour effectuer les requêtes, vous devez utiliser l'objet jDbConnection
@@ -67,10 +67,10 @@ informations dans plusieurs propriétés :
 
    * ''$this->_primaryTable'' : l'alias de la table primaire,
    * ''$this->_tables'' : une liste d'informations,
-   * ''$this->getProperties()'' pour avoir des informations détaillées sur chaque propriétés d'un record,
+   * ''$this->getProperties()'' pour avoir des informations détaillées sur chaque propriété d'un record,
    * ''$this->getPrimaryKeyNames()'' pour avoir la liste des noms des propriétés servant de clés primaires.
 
-Et sur un record que vous aurez préalablement instancié, vous aurez aussi les même
+Et sur un record que vous aurez préalablement instancié, vous aurez aussi les mêmes
 méthodes ''getProperties()'' et ''getPrimaryKeyNames()''.
 
 Pour les détails, voir [[refclass:dao/jDaoFactoryBase|la documentation de référence de jDaoFactoryBase]]
@@ -84,7 +84,7 @@ préparer, avant de les intégrer dans une requête SQL, ceci pour éviter des
 problèmes de sécurité type SQL injection.
 
 Pour cela, vous avez une méthode, ''_prepareValue()'', qui accepte en paramètre
-une valeur, et un nom de type de donnée (celle que l'on indique à l'attribut
+une valeur, et un nom de type de données (celle que l'on indique à l'attribut
 ''datatype'' de la balise ''property'').
 
 <code xml>
