@@ -18,13 +18,13 @@ récupérer les paramètres dont il a besoin. Par exemple, au changement d'une U
 il se peut qu'un paramètre que vous trouviez dans @@$_GET@@ se trouve maintenant
 dans le @@PATHINFO@@ de l'URL, ou que cela soit passé en $_POST etc... Plus
 important, des plugins de coordinateurs, peuvent rajouter des paramètres ou
-modifier ceux qui sont reçu (sans modifier les tableaux originaux), comme le
+modifier ceux qui sont reçus (sans modifier les tableaux originaux), comme le
 fait par exemple le plugin magicquotes (qui annule l'effet magicquotes).
 
 Enfin, suivant les protocoles (SOAP, XMLRPC,..), les paramètres peuvent aussi se
-trouver dans le corps de la requête HTTP..
+trouver dans le corps de la requête HTTP.
 
-C'est pourquoi Jelix propose un moyen, **unifié**, pour récupérer des paramètres
+C'est pourquoi Jelix propose un moyen **unifié** pour récupérer des paramètres
 de requêtes : il faut utiliser la méthode @@param()@@ d'un contrôleur.
 
 
@@ -32,7 +32,7 @@ de requêtes : il faut utiliser la méthode @@param()@@ d'un contrôleur.
 ===== Récupérer les paramètres de requête =====
 
 Comme vous le savez, les paramètres de la requête http sont stockés dans un
-objet @@C@jRequest@@, qui lui même est stocké dans l'objet @@C@jCoordinator@@.
+objet @@C@jRequest@@, qui lui-même est stocké dans l'objet @@C@jCoordinator@@.
 On peut ainsi récupérer un paramètre de cette façon :
 
 <code php>
@@ -46,7 +46,7 @@ contrôleurs, au résultat équivalent.
   $id = $this->param('id');
 </code>
 
-Si il n'y a pas de paramètre de nom id, le résultat sera la valeur @@L@null@@.
+S'il n'y a pas de paramètre de nom id, le résultat sera la valeur @@L@null@@.
 Vous pouvez aussi indiquer en deuxième argument une valeur qui sera prise si le
 paramètre indiqué n'existe pas.
 
