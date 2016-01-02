@@ -82,7 +82,7 @@ l'attribut eventbefore, et/ou eventafter qui doivent contenir //true// ou
 
 Les évènements générés sont alors daoSpecificUpdateBefore,
 daoSpecificUpdateAfter, daoSpecificDeleteBefore et daoSpecificDeleteAfter. Ils
-ont pour paramètre
+ont pour paramètres
   * dao, contenant le sélecteur du dao concerné
   * method, le nom de la méthode
   * params, contenant la liste des paramètres.
