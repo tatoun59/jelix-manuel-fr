@@ -2,7 +2,7 @@
 
 ===== Principes d'une zone ===== 
 
-Les zones dans Jelix représentent des morceaux de la réponse finale. En d'autre
+Les zones dans Jelix représentent des morceaux de la réponse finale. En d'autres
 termes, elles sont destinées à gérer et générer le contenu d'une portion de
 l'écran, de la page web. Une page web est donc composée essentiellement de
 zones.
@@ -94,7 +94,7 @@ php cmd.php  createzone [MonModule] [MaZone] [MonTemplate]
 où le paramètre [MonTemplate] est facultatif. Le nom du template est identique
 au nom de la zone dans ce cas.
 
-Pour ne pas créer de template précisez simplement l'option -notpl.
+Pour ne pas créer de template, précisez simplement l'option -notpl.
 <code>
 php cmd.php  createzone -notpl [MonModule] [MaZone] [MonTemplate] 
 </code>
@@ -164,7 +164,7 @@ class testZone extends jZone {
 }
 </code>
 
-Dans cet exemple on a fait passer la variable 'foo' avec pour valeur 'bar' en
+Dans cet exemple, on a fait passer la variable 'foo' avec pour valeur 'bar' en
 paramètre de la zone. On a récupéré la variable 'foo' dans la zone pour
 effectuer un traitement dessus (ici, mise en majuscule) et on a affecté 'foo' au
 template de la zone.
@@ -215,7 +215,7 @@ engendrer autant de fichiers dans votre répertoire temporaire. Il faut donc
 limite en nombre de fichiers par exemple.
 
 Utilisez donc le cache à bon escient. Par exemple, pour une application
-fréquentée moyennement (un même article lu seulement quelque fois par jour), il
+fréquentée moyennement (un même article lu seulement quelques fois par jour), il
 n'est pas forcément nécessaire d'activer le cache. À vous de juger...
 
 
@@ -226,7 +226,7 @@ obsolètes. Cette régénération peut se faire automatiquement régulièrement
 (toutes les //n// secondes), ou alors être forcée manuellement.
 
 Vous utiliserez l'une ou l'autre des méthodes selon les cas. La deuxième méthode
-est moins gourmande en ressource puisque le cache se régénère uniquement en
+est moins gourmande en ressources puisque le cache se régénère uniquement en
 temps voulu. L'inconvénient c'est qu'il faut explicitement effacer le cache dans
 vos classes métier. La première méthode évite ce travail, mais consomme plus de
 ressources, et le contenu de la zone n'est pas à jour pendant le délai indiqué.
@@ -247,7 +247,7 @@ class testZone extends jZone {
 }
 </code>
 
-Ici le cache sera régénéré toutes les 60 secondes. Si vous mettez 0, il n'y aura
+Ici, le cache sera régénéré toutes les 60 secondes. Si vous mettez 0, il n'y aura
 pas de rafraîchissement automatique.
 
 == Forcé ==
