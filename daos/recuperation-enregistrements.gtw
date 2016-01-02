@@ -10,7 +10,7 @@ La méthode à utiliser avec la fabrique (factory), est @@M@get()@@ en lui donna
 la valeur de la clé primaire de l'enregistrement.
 
 La méthode retourne directement l'objet correspondant à l'enregistrement. Chaque
-propriété de l'objet correspond à un champs de l'enregistrement, tel que c'est
+propriété de l'objet correspond à un champ de l'enregistrement, tel que c'est
 déclaré dans le fichier dao.
 
 <code php>
@@ -56,8 +56,8 @@ La méthode @@M@delete()@@ fonctionne de la même façon.
 
 Quand vous voulez récupérer tout les enregistrements, il faut utiliser
 @@M@findAll()@@. Cette méthode retourne un objet @@C@jDbResultSet@@ qui
-permettra alors de récupérer un à un les enregistrements. Rappelez vous que
-cette classe implémente l"interface Iterator, et est donc utilisable directement
+permettra alors de récupérer un à un les enregistrements. Rappelez-vous que
+cette classe implémente l'interface Iterator, et est donc utilisable directement
 dans un @@foreach@@.
 
 <code php>
@@ -107,7 +107,7 @@ spécifiant dans le fichier XML (voir [[methodes_xml|DAO avancés]]).
 
 Les factory DAO mettent à disposition trois méthodes @@M@findBy()@@,
 @@M@countBy()@@ et @@M@deleteBy()@@ qui s'utilisent en leur passant un objet
-@@C@jDaoConditions@@, objets que vous récupérez avec @@C@jDao@@. Voici un
+@@C@jDaoConditions@@, objet que vous récupérez avec @@C@jDao@@. Voici un
 exemple :
 
 <code php>   
@@ -278,7 +278,7 @@ Pour déclarer un enregistrement personnalisé, il vous suffira de renseigner l'
 Un enregistrement doit être stocké dans un fichier @@F@myrecord.daorecord.php@@ dans le
 répertoire @@F@daos/@@ de votre module, et doit être défini de la manière suivante:
 
-  * l' enregistrement doit être déclaré via une classe abstraite
+  * l'enregistrement doit être déclaré via une classe abstraite
   * le nom de cette classe est le nom de l'enregistrement suivi du mot "DaoRecord"
   * la classe doit hériter de la classe @@C@cDaoUserRecord_mymodule_Jx_mydao_Jx@@ avec module et dao correspondant au dao de l'enregistrement en question
 
