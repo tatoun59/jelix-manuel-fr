@@ -37,8 +37,8 @@ trois composants du pattern MVC :
 À partir d'un fichier jForms XML, jForms gère un objet (héritant de jFormsBase)
 créé à partir des informations contenues dans le fichier XML, et permettant
 d'initialiser le contenu du formulaire, de gérer son contenu, de le sauvegarder
-etc. Par conséquent il contient toutes les valeurs saisies, stockées dans des
+etc. Par conséquent, il contient toutes les valeurs saisies, stockées dans des
 variables de cet objet (//variables de formulaire//).
 
 C'est aussi à partir d'un objet jForms que des //plugins// de //templates//
-permettent d'afficher les éléments HTML correspondant.
+permettent d'afficher les éléments HTML correspondants.
