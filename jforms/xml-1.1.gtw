@@ -15,7 +15,7 @@ Le document XML que vous écrivez dans un fichier jForms est composé d'une bali
 </code>
 
 
-Dans cette balise, vous indiquerez les balises correspondantes à chacun des
+Dans cette balise, vous indiquerez les balises correspondant à chacun des
 contrôles (champs de saisies) composant le formulaire. Le traitement et
 l'affichage de ces contrôles se feront dans le même ordre que celui de leur
 apparition dans le document.
@@ -153,7 +153,7 @@ les attributs @@A@readonly@@ et @@A@required@@. Vous pouvez indiquer aussi ces
 attributs supplémentaires : @@A@type@@, @@A@defaultvalue@@, @@A@size@@,
 @@A@minlength@@, @@A@maxlength@@ et @@A@pattern@@.
 
-@@A@defaultvalue@@ permet d'indiquer une valeur par défaut qui sera affichée
+@@A@defaultvalue@@ permettent d'indiquer une valeur par défaut qui sera affichée
 quand le formulaire est vide. Vous pouvez mettre la valeur @@L@"now"@@ pour les
 champs de saisie de dates. La valeur par défaut sera alors la date de
 maintenant.
@@ -162,7 +162,7 @@ maintenant.
 caractères.
 
 @@A@maxlength@@ et @@A@minlength@@ permet d'ajouter une contrainte sur la valeur
-saisie : la longueur minimale et maximale de la chaine de caractère saisie. Ces
+saisie : la longueur minimale et maximale de la chaine de caractères saisie. Ces
 deux attributs ne sont utilisables que pour le @@A@type="string"@@.
 
 @@A@minvalue@@ et @@A@maxvalue@@ permet d'ajouter une contrainte sur la valeur
@@ -229,7 +229,7 @@ pouvez utiliser les balises @@E@<label>@@, @@E@<hint>@@, @@E@<alert>@@,
 
 @@A@defaultvalue@@ permet d'indiquer une valeur à afficher automatiquement pour
 un nouveau formulaire, tandis que @@A@rows@@ et @@A@cols@@ permettent de fixer
-la taille du champs de saisie en hauteur et largeur (comme le textarea en HTML).
+la taille du champ de saisie en hauteur et largeur (comme le textarea en HTML).
 
 Un exemple :
 
@@ -276,7 +276,7 @@ souhaitez, voir [[xml/htmleditor|la page sur htmleditor]].
 Vous pouvez utiliser un textarea pour éditer du contenu wiki. Cependant il y a
 l'element @@E@<wikieditor>@@ qui permet de specifier que c'est du contenu wiki,
 et les générateurs peuvent afficher une barre d'outils pour faciliter l'édition.
-Il utiliseront automatiquement WikiRenderer (jWiki) pour transformer le contenu
+Ils utiliseront automatiquement WikiRenderer (jWiki) pour transformer le contenu
 en HTML et l'afficher.
 
 <code xml>
@@ -285,7 +285,7 @@ en HTML et l'afficher.
   </wikieditor>
 </code>
 
-Vous pouvez indiquer une configuration pour la barre d'outil, avec l'attribut
+Vous pouvez indiquer une configuration pour la barre d'outils, avec l'attribut
 @@A@config@@. Pour en savoir plus, voir [[xml/wikieditor|la page sur wikieditor]].
 
 
@@ -310,7 +310,7 @@ Il y aussi les attributs spécifiques @@A@mindate@@, @@A@maxdate@@ et
 Pour les attributs @@A@mindate@@ et @@A@maxdate@@, vous pouvez utiliser soit une
 date absolue au format DB comme '2009-01-01', soit une chaine qui contient une
 valeur qui sera analysée par la fonction PHP strtotime. Cette dernière solution
-reste la plus pratique. Par exemple pour une date de naissance si l'on veut que
+reste la plus pratique. Par exemple, pour une date de naissance si l'on veut que
 des dates de naissance des personnes de 18 à 70 ans :
 
 <code xml>
@@ -406,7 +406,7 @@ valeur de @@A@valueoncheck@@ ou de @@A@valueonuncheck@@.
 
 Pour afficher la valeur d'une case à cocher lors de l'affichage des données seules d'un
 formulaire, il est souvent préférable d'afficher un libellé correspondant. Utilisez alors
-les elements @@E@<oncheckvalue>@@ et @@E@<onuncheckvalue>@@.
+les éléments @@E@<oncheckvalue>@@ et @@E@<onuncheckvalue>@@.
 
 <code xml>
   <checkbox ref="souvenir" valueoncheck="O" valueonuncheck="N">
@@ -459,7 +459,7 @@ plus "sucre" est coché, vous recevrez @@array(54, 27)@@.
 ==== Boutons radios ====
 
 Les boutons radios vont toujours par groupe, d'au moins 2. Pour déclarer un
-groupe de boutons radio, vous utiliserez la balise @@E@<radiobuttons>@@.
+groupe de boutons radios, vous utiliserez la balise @@E@<radiobuttons>@@.
 
 Vous devez y mettre l'attribut @@A@ref@@, et vous pouvez utiliser les balises
 @@E@<label>@@, @@E@<hint>@@, @@E@<alert>@@, @@E@<help>@@ ainsi que les attributs
@@ -479,7 +479,7 @@ Exemple :
   </radiobuttons>
 </code>
 
-Ceci affichera une série de 4 boutons radio, et la valeur choisie sera stockée
+Ceci affichera une série de 4 boutons radios, et la valeur choisie sera stockée
 dans la variable de formulaire "couleur".
 
 
@@ -507,7 +507,7 @@ Exemple :
 
 La variable de formulaire contiendra la valeur de l'item sélectionné.
 
-Par défaut, si il n'y a pas l'attribut @@A@required="true"@@, il n'est pas
+Par défaut, s'il n'y a pas l'attribut @@A@required="true"@@, il n'est pas
 obligatoire de faire un choix dans la liste. Vous avez donc automatiquement un
 premier choix "vide" qui est pré-selectionné. Si vous voulez indiquer le libellé
 de ce choix vide, vous devez utiliser l'élement @@E@<emptyitem>@@.
@@ -572,8 +572,8 @@ Deux attributs supplémentaires sont à votre disposition, pour contrôler la
 nature et la taille des fichiers, qui sont respectivement @@A@mimetype@@ (devant
 contenir un ou plusieurs type mime) et @@A@maxsize@@ (taille en octets).
 
-Attention : sous IE, le type-mime des images .jpg et .jpeg sont considéré comme
-du Progressive JPEG, soit image/pjpeg. Assurez vous de rajouter ce type-mime en
+Attention : sous IE, le type-mime des images .jpg et .jpeg est considéré comme
+du Progressive JPEG, soit image/pjpeg. Assurez-vous de rajouter ce type-mime en
 plus du image/jpeg si vous voulez autoriser le format JPEG.
 
 <code xml>
@@ -673,17 +673,17 @@ La balise @@E@<choice>@@ accepte les balises @@E@<help>@@, @@E@<hint>@@,
 @@E@<alert>@@ ainsi que les attributs @@A@readonly@@, @@A@required@@ et
 @@A@selectedvalue@@. Cet attribut peut comporter la valeur de l'item sélectionné
 par défaut. Une autre façon de sélectionner par défaut un item est de mettre un
-attribut @@A@selected="true"@@ sur la balise @@E@<item>@@ correspondant.
+attribut @@A@selected="true"@@ sur la balise @@E@<item>@@ correspondante.
 
 ==== Captcha ====
 
-Dans certain contexte, il est nécessaire d'empêcher la saisie automatique des
-formulaire (par des robots spammeurs par exemple).
+Dans certains contextes, il est nécessaire d'empêcher la saisie automatique des
+formulaires (par des robots spammeurs par exemple).
 
-JForms fourni la balise @@E@<captcha>@@ pour inclure automatiquement un champs
-de saisie qui permettra de vérifier que le formulaire est bien saisie par un
-humain. Pour le moment, ce champs de saisie n'est pas une image à déchiffrer
-comme on le voit sur certain site, mais une simple champs texte dans lequel il
+JForms fournit la balise @@E@<captcha>@@ pour inclure automatiquement un champ
+de saisie qui permettra de vérifier que le formulaire est bien saisi par un
+humain. Pour le moment, ce champ de saisie n'est pas une image à déchiffrer
+comme on le voit sur certains sites, mais un simple champ texte dans lequel il
 faut indiquer la réponse à une question posée, affichée automatiquement par
 jForms.
 
@@ -699,7 +699,7 @@ Les questions posées sont stockées dans un fichier de locales, dans le module
 jelix. Exemple pour le français :
 @@F@lib/jelix/core-modules/jelix/locales/fr_FR/captcha.UTF-8.properties@@. Ce
 fichier contient une première locale, @@number@@, qui indique le nombre de
-question, et ensuite les questions et réponses numérotées. Vous pouvez redéfinir
+questions, et ensuite les questions et réponses numérotées. Vous pouvez redéfinir
 ce fichier pour ajouter ou modifier les questions et réponses. Voir
 [[/surcharge-de-fichiers|le chapitre sur la redéfinition des fichiers]].
 
@@ -858,11 +858,11 @@ Si ce paramètre est une valeur statique, ajoutez l'attribut @@A@criteria@@ :
 La méthode @@M@findByCat()@@ sera appelée avec la valeur @@L@"admin"@@ en paramètre.
 
 
-== Dépendance avec un autre champs de saisie ==
+== Dépendance avec un autre champ de saisie ==
 
 Bien souvent, on veut pouvoir indiquer cette valeur de manière dynamique, et
-souvent, provenant d'un autre champs de saisie. Un exemple : une liste de ville
-qui dépend du choix dans une liste de département.
+souvent, provenant d'un autre champ de saisie. Un exemple : une liste de villes
+qui dépend du choix dans une liste de départements.
 
 Plutôt que d'utiliser @@A@criteria@@, vous utiliserez l'attribut
 @@A@criteriafrom@@, où vous indiquerez l'identifiant (attribut @@A@ref@@) de ce
@@ -889,7 +889,7 @@ valeur du contrôle dont dépend la liste. Ce n'était pas le cas dans Jelix 1.1
 === Pour l'affichage des valeurs ===
 
 Lorsque le formulaire est affiché via les plugins @@{formdata}@@ et
-@@{formdatafull}@@, où seules donc sont affichés les valeurs sélectionnées (ou
+@@{formdatafull}@@, où seules donc sont affichées les valeurs sélectionnées (ou
 plutôt les libellés correspondants), jForms ne fait pas appel à la méthode
 indiquée dans @@A@method@@ puisqu'elle est censée renvoyer une liste. Par
 défaut, c'est la méthode @@M@get@@ de la factory dao qui est appelée, avec la
@@ -1024,9 +1024,9 @@ avec un attribut @@A@label@@ ou @@A@locale@@.
 Pour les sources de données de type dao ou class, vous devez utiliser l'attribut
 @@A@groupby@@ sur la balise @@E@<datasource>@@. Pour une source de donnée dao,
 @@A@groupby@@ indique la propriété du dao qui contient le libellé du groupe
-auquel appartient l'enregistrement. Pour une source de donnée de type class, la
+auquel appartient l'enregistrement. Pour une source de données de type class, la
 signification de @@A@groupby@@ dépend de l'implémentation de la source de
-donnée.
+données.
 
 
 ==== Présélection de valeurs ====
@@ -1036,7 +1036,7 @@ seront sélectionnées. Vous avez trois façons de le faire :
 
    - soit indiquer un attribut @@A@selected="true"@@ sur chaque balise
      @@E@item@@ voulue si vous utilisez celles-ci. Plusieurs items peuvent avoir
-     un attribut @@A@selected@@ seulement sur les listes de case à cocher
+     un attribut @@A@selected@@ seulement sur les listes de cases à cocher
      (checkboxes), soit sur une listbox "multiple". Dans les autres cas, un seul
      item doit avoir l'attribut @@A@selected@@.
    - soit indiquer un attribut @@A@selectedvalue@@ sur la balise du contrôle, en
