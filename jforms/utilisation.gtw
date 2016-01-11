@@ -1,6 +1,6 @@
 ~~LANG:EN@enman:jforms/usage~~
 
-Les données d'un formulaire jforms sont stockées en sessions. On manipule ces
+Les données d'un formulaire jforms sont stockées en session. On manipule ces
 données au travers d'un //objet formulaire//, instance d'une classe héritant de
 @@C@jFormsBase@@. Cette classe est générée automatiquement à partir du fichier
 XML que vous fournissez. Comme pour les DAOs, elle est stockée dans un cache
@@ -25,7 +25,7 @@ d'exemple, vous utilisez les noms que vous voulez bien sûr):
      les éventuelles erreurs de saisie trouvées lors d'une validation
      précédente. La soumission du formulaire par l'utilisateur dirigera vers
      l'action "save".
-   * une action "save". l'instance du formulaire est récupérée auprès de
+   * une action "save". L'instance du formulaire est récupérée auprès de
      @@C@jForms@@, et elle est remplie avec les données reçues du navigateur.
      Elle pourra ensuite lancer la vérification des données dans le formulaire.
      S'il y a des erreurs, il y aura une redirection vers "show". Sinon on
@@ -70,9 +70,9 @@ Pourquoi ? Avec un navigateur web, l'utilisateur a la possibilité d'ouvrir
 plusieurs pages à la fois. Il a donc la possibilité d'afficher plusieurs fois la
 même page qui afficherait par exemple ce formulaire d'édition de produit, mais
 avec à chaque fois un produit différent. Pour éviter qu'à chaque fois que l'on
-ouvre cette page, donc qu'à chaque fois que l'on créé une instance du formulaire
-jForms, on aille écraser les données en sessions du même formulaire d'un autre
-produit ouvert en même temps, on donne un identifiant de formulaire. Ainsi il
+ouvre cette page, donc qu'à chaque fois que l'on crée une instance du formulaire
+jForms, on aille écraser les données en session du même formulaire d'un autre
+produit ouvert en même temps, on donne un identifiant de formulaire. Ainsi, il
 n'y a pas de collision des données de chaque instance de formulaire. On peut
 donner ce que l'on veut comme identifiant (une chaine, un nombre), et en général
 on donne l'identifiant de l'enregistrement SQL quand il s'agit de l'édition de
@@ -106,7 +106,7 @@ Après la création d'un formulaire, il est peut être nécessaire de le pré-re
 ==== Initialisation simple ====
 
 Pour cela, vous utiliserez la méthode @@M@setData()@@ sur l'objet formulaire,
-qui accepte en argument, le nom du champ à préremplir, et la valeur à lui donner
+qui accepte en arguments, le nom du champ à préremplir, et la valeur à lui donner
 :
 
 <code php>
@@ -132,7 +132,7 @@ identifiant de l'enregistrement à récupérer.
    $form->initFromDao("shop~products");
 </code>
 
-Ici le formulaire sera pré-rempli avec les valeurs de l'enregistrement dont la
+Ici, le formulaire sera pré-rempli avec les valeurs de l'enregistrement dont la
 clé est @@V@$product_id@@, et le dao "shop~products" sera utilisé pour cette
 lecture.
 
@@ -313,7 +313,7 @@ l'avance d'un élément précis. Un exemple concret : la saisie de fichiers join
 à un article. Le formulaire permet de saisir les données de l'article (son
 titre, son contenu...), mais aussi d'ajouter des fichiers joints, comme des
 photos illustrant l'article. Quand on modifie un article, pour chaque photo
-existante, on voudrait pouvoir avoir un champs pour modifier son titre, un autre
+existante, on voudrait pouvoir avoir un champ pour modifier son titre, un autre
 pour uploader une nouvelle version de cette photo, et un bouton pour la
 supprimer. Il faut ainsi créer plusieurs de ces champs de saisies en fonction du
 nombre de ces photos, sans avoir à en limiter le nombre.
@@ -340,8 +340,8 @@ Il faut savoir qu'il faut ajouter ces champs à chaque fois que vous créez ou
 récupérez le formulaire. En effet, à chaque fois que vous récupérer un
 formulaire avec @@M@jForms::get()@@ ou @@M@jForms::fill()@@, jForms instancie
 toujours l'objet form à partir de ce qui est décrit dans le fichier XML (qui est
-traduit en classe PHP) et donc sans votre champs. C'est pourquoi il faut ajouter
-votre champs non seulement à la creation avant l'affichage, mais aussi avant son
+traduit en classe PHP) et donc sans votre champ. C'est pourquoi il faut ajouter
+votre champ non seulement à la creation avant l'affichage, mais aussi avant son
 remplissage avec les données soumises.
 
 
